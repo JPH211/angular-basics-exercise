@@ -1,0 +1,13 @@
+<h1 [ngStyle]="{ color: getColor() }" >{{ title }}</h1>
+
+<button class="btn btn-primary" (click)="toggleIsTechRelated()" >
+  Change isTechRelated
+</button>
+<!-- Bonus #1 html -->
+
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, autem magni. Illo distinctio aperiam ut quae voluptates atque, quam sed? Magni dicta quos culpa eum nostrum dolor perferendis sit at.</p>
+
+<!--Bonus #2 html-->
+<p *ngIf="isTechRelated; else elseBlock">{{ techRelatedMockText }}</p>
+<ng-template #elseBlock>Not {{techRelatedMockText}}</ng-template>
